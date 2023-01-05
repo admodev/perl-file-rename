@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+while (<*.for>) {
+  $oldname = $_;
+  s/\.for$/\.f/;
+  rename $oldname, $_;
+}
